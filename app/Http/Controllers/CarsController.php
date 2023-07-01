@@ -89,6 +89,7 @@ class CarsController extends Controller
         // make the String of carType to lower case
        $carBrand = strtolower($carType);
 
+       
         return view('cars.show',[
             'carInfo' => Car::where('title', $carBrand)->get()->first(),
         ]);
