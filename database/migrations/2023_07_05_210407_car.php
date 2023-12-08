@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cars', function (Blueprint $table) {
+        Schema::create('car', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug');
-            $table->string('title');
+            $table->string('name');
             $table->longText('description');
+            $table->integer('price');
             $table->string('image_path');
-            $table->timestamps();   
+            $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-
+          
         });
     }
 

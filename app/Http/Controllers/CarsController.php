@@ -2,96 +2,131 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Models\Car;
+use Illuminate\Support\Facades\DB;
+
 class CarsController extends Controller
 {
-    public function index(Request $request)
+    public function index($carType)
     {
-       $car =$request->title;
-        return view('cars.car-type.mercedes',[
-            'car' => Car::where('title','=', $car) ,
-            'title'=>'carname'
-        ]);
-      
-    }
-
-    
-    public function create(Request $request)
-    {
-     
-        return view('cars.create');
-        
+        //make the String of carType to lower case
        
+            $carBrand = strtolower($carType);
+          
+            return view('cars.index', [
+                'cars' => DB::table('car')->where('name', $carBrand)->get()
+            ]);
+      
+
+
+
+
     }
 
-    
+
+    public function create()
+    {
+
+        return view('cars.create');
+
+
+    }
+
+
     public function store(Request $request)
     {
         $request->validate([
-            'car'=>'required',
-            'img'=>'required',
-            'name'=>'required',
-            'description'=>'required',
-            'price'=>'required',
+            'name' => 'required',
+            'description' => 'required',
+            'phone' => 'required',
+            'region' => 'required',
+            'price' => 'required',
+            'image' => 'required|mimes:jpg,png,jped|max:5048',
         ]);
+
+        $newImageName = uniqid() . '_' . $request->title . '.' . $request->image->extension();
+
+        $request->image->move(public_path('images'), $newImageName);
+
+
         Car::create([
-            'car'=>$request->input('slug'),
-            'img'=>$request->input('img'),
-            'name'=>$request->input('name'),
-            'description'=>$request->input('description'),
-            'price'=>$request->input('price')
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'phone' => $request->input('phone'),
+            'region' => $request->input('region'),
+            'price' => $request->input('price'),
+            'image_path' => $newImageName,
+            'user_id' => auth()->user()->id
         ]);
-        return redirect('/mercedes');
+        return redirect('car');
     }
 
-  
-    public function show($car)
+
+    public function show($id)
     {
-        return view('cars.show');
-    }
 
-  
-    public function edit($car)
+
+        return view('cars.show')
+            ->with('car', Car::where('id', $id)->first());
+
+
+    }
+    public function edit($id)
     {
-    return view('cars.edit')
-    ->with('car',Car::where('car',$car)->first());
+        // return view('cars.edit');
+        return view('cars.edit', [
+            'cars' => DB::table('car')->where('id', $id)->first()
+        ]);
     }
 
-    
-    public function update(Request $request,$car)
+
+    public function update(Request $request, $id)
     {
         $request->validate([
-            'img'=>'required',
-            'name'=>'required',
-            'description'=>'required',
-            'price'=>'required',
+            'name' => 'required',
+            'description' => 'required',
+            'phone' => 'required',
+            'region' => 'required',
+            'price' => 'required|string|max:10',
+            'image' => 'required|mimes:jpg,png,jped|max:5048',
         ]);
-        
-        Car::where('car',$car)->update ([
-            'img'=>$request->input('img'),
-            'name'=>$request->input('name'),
-            'description'=>$request->input('description'),
-            'price'=>$request->input('price')
+
+
+        Car::where('id', $id)->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'phone' => $request->input('phone'),
+            'region' => $request->input('region'),
+            'price' => $request->input('price'),
+            'user_id' => auth()->user()->id
         ]);
-        return redirect('/mercedes');
+        return redirect(route('cars.show'));
     }
 
-    
-    public function destroy(string $car)
-    {
-        Car::where('car',$car)->delete();
-        return redirect('index.car')->with('message','done');
-    }
-    public function dan(Request $request, string $carType)
-    {
-        // make the String of carType to lower case
-       $carBrand = strtolower($carType);
 
-       
-        return view('cars.show',[
-            'carInfo' => Car::where('title', $carBrand)->get()->first(),
-        ]);
+    public function destroy($id)
+    {
+        Car::where('id', $id)->delete();
+        return redirect('car')
+            ->with('message', 'done');
     }
+         
+    public function search(Request $request)
+    {
+        $car =new Car();
+        if (isset($_GET['query'])) {
+            $search = $_GET['query'];
+   
+            $query = DB::table('car')->where('description', 'LIKE', '%' . $search . '%')->get();                 
+          
+            return view('cars.search', [
+                'cars' => $query
+            ]);
+
+        } else {
+            return view('cars.index');
+        }
+    }         
 }

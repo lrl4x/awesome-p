@@ -151,7 +151,7 @@
 
                 <div class=" container mx-auto p-2 grid grid-cols-6  gap-2 w-full ">
                     <div>
-                        <a href="{{route('cars.show', 'bmw')}}">
+                        <a href="{{route('cars.index', 'MERCEDES')}}">
                             <img class="h-6 max-w-full rounded-lg"
                                 src="https://th.bing.com/th/id/R.f7f4109fb6e021b080139b28b036cf59?rik=zpuSE3DOQ1bC1Q&pid=ImgRaw&r=0"
                                 alt="">
@@ -159,154 +159,210 @@
 
                     </div>
                     <div>
-                        <a href="{{route('cars.show', 'KIA')}}">
+                        <a href="{{route('cars.index', 'BMW')}}">
                             <img class="h-6 max-w-full rounded-lg"
                                 src="https://th.bing.com/th/id/R.11c17a8cffdce4bc047102db49a94a51?rik=YMKOe232a1ee3w&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f02%2fBMW_logo_big_transparent_png.png&ehk=AhLghiJcc6OJgtYYdNOiiM061S%2fa11BCNRbBYQtUBjI%3d&risl=&pid=ImgRaw&r=0"
                                 alt="">
                         </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'AUDI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.1e0abc8926c001adbc10a9fc395fed50?rik=U1OUsfrQbCZQYQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2faudi-logo-png-audi-logo-rings-symbol-4880.png&ehk=X02d5HuUWJ8hWO5ZyroCb7jpGE%2fGj1b8D2KRK5XoY78%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
 
                     <div>
+                        <a href="{{route('cars.index', 'PORSCHE')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.b4c1d1e8b303191cca43edfcd88a1e7c?rik=qFkt7AOl4rKEmQ&pid=ImgRaw&r=0"
                             alt="">
-                    </div>
+                        </a>
+                    </div> 
 
 
                     <div>
+                        <a href="{{route('cars.index', 'VOLKSWAGEN')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.7f3c8507b9d5eea32869a0124674a63d?rik=ffNo1E8ILppazQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1667.png&ehk=bHVzvjpqTKRVFQHVicQgtIsdIsneSZTad4bCD5yDCNI%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
 
                     <div>
+                        <a href="{{route('cars.index', 'SUBARU')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/OIP.a__x3W7fUGPcbCCHaxfkuAHaEc?pid=ImgDet&rs=1" alt="">
-                    </div>
+                        </a>
+                        </div>
 
                     <div>
+                        <a href="{{route('cars.index', 'MAZDA')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.f2d85781b68aa7721702a79ff524ab0e?rik=EYOxhpAB0FSKYQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fcar-logo-mazda-1920.png&ehk=MZqdIW2lMq63L2bGLl5%2ftJ3bfC8F7X7sN1REgfFgsK4%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
-                    </div>
+                        </a>
+                        </div>
                     <div>
+                        <a href="{{route('cars.index', 'FIAT')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.baea2af717e106c715c377b5199cde18?rik=WoO%2b%2bEvxi%2b%2f5Fg&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1637.png&ehk=U74Km3eTu5CUIZJKzHtzcG50kiYKcklW4geBpvlTLE8%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
 
                     <div>
+                        <a href="{{route('cars.index', 'FORD')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.afdc2527561852364e2d024996dea19f?rik=JKduhMgFdKMJUw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1666.png&ehk=pyvfGbs3A3kBnd0PLV269hNBNESbpNQS146NOwhnIEE%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
-                    </div>
+                        </a>
+                        </div>
                     <div>
+                        <a href="{{route('cars.index', 'TOYOTA')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://pluspng.com/img-png/car-logos-and-their-meanings-the-power-of-the-brand-716.png"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'SKODA')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.7d329d8a52f3a2d6e5fa7cde481635dc?rik=%2bz3HWqjwUvgT7g&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1664.png&ehk=LdBjnxulNspfyPGsHjhizqIR%2bHi3lNCKP8%2bNaRVMPTA%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'HONDA')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://imcinspection.com/wp-content/uploads/2016/01/car_logo_PNG1643-768x626.png"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'KIA')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.77774748270545cc35f7014abd1e0ec4?rik=L4rlI74lRZGvOQ&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f526149_car-logo-png.png&ehk=rU9VxIUcYMd2f3M4HDVaEAYmmB3Aez69Qajc2I36oyQ%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
-                    <div>
+                    <div> 
+                        <a href="{{route('cars.index', 'RENAULT')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://eliteracingweb.files.wordpress.com/2017/08/car_logo_png1661.png?w=594"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'SUZUKI')}}">
                         <img class="h-6 max-w-full rounded-lg" src="https://pluspng.com/img-png/car-logo-suzuki-3000.png"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'CHEVORLET')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://pngimg.com/uploads/car_logo/car_logo_PNG1644.png" alt="">
-                    </div>
+                        </a>
+                        </div>
                     <div>
+                        <a href="{{route('cars.index', 'JAGUAR')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://imcinspection.com/wp-content/uploads/2016/01/car_logo_PNG1647-1024x768.png"
                             alt="">
-                    </div>
+                        </a>
+                        </div>
                     <div>
+                        <a href="{{route('cars.index', 'LAND ROVER')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://imcinspection.com/wp-content/uploads/2016/01/car_logo_PNG1653-1024x566.png"
                             alt="">
-                    </div>
+                        </a>
+                        </div>
                     <div>
+                        <a href="{{route('cars.index', 'FERRARI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.4eb01cdd3aaedf3acb148ad77d9e1f1f?rik=qM8w5tMHxgOzpg&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1642.png&ehk=M34NHc5VM%2fxeNlNLTyyuKI7lnoYuysQKAT5BxSKr3jo%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'INFINITI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.95ccf9387997fcaccaa4c1b8b0da896e?rik=e8jGJXwDGZw7XQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fcar_logo%2fcar_logo_PNG1646.png&ehk=Y0E7QJJYQ4rLt6X4J%2fCvMlYloRdwuZ03RxzQMK%2fA1%2b4%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'LAMBORGHINI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.35a49e20517655572b1929470e0db323?rik=Qk5X6J4RiCqH%2bg&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'BUGATTI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.2837f8e46063f860cc29b3538124d506?rik=CziAXq%2f5tF4PVg&riu=http%3a%2f%2fwww.carlogos.org%2flogo%2fBugatti-b-logo-1366x768.png&ehk=IU%2bF%2bo3M7r7GbclZyPilxuolTtLnvHJqSMO6U%2f6Bbuw%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'MG')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.249968a2cbd440b89eecec59d14943ee?rik=%2bKt9AnthFjej7Q&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'ROLLS ROYCE')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.8212e3207e68b986fa25423918bb91d7?rik=TDeTYE5BfkR%2fDg&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'DODGE')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.fdd072e63cfcae6dbdf76cbf6160455e?rik=%2bIN%2fnrveasnyVg&riu=http%3a%2f%2fwww.carlogos.org%2flogo%2fDodge-logo-2011-3840x2160.png&ehk=8q7RUtO1aFxrdpoUrTUf8v2LLnpZj52ntpkE3Rami%2fg%3d&risl=&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'CHRYSLER')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.582409d920df279359d71b8d7cabd3ae?rik=NH3jQ5%2bioPSmWg&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'BENTLEY')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.eb526c8312c2595be4893cc448d37625?rik=XqiTgS0cE9gJ6Q&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'CADILLAC')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.386eb9327cd4ea1c3e48b788b67abd33?rik=CrtQC39emDUQRA&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'MASERATI')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.10b423dd4e4b1678ac67cb1ad81bfde2?rik=GZnWmMXaVhA7Jg&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
                     <div>
+                        <a href="{{route('cars.index', 'MINI COOPER')}}">
                         <img class="h-6 max-w-full rounded-lg"
                             src="https://th.bing.com/th/id/R.8a3fc23cde25092334143c251f21f13a?rik=n58pBrpH8RGDqA&pid=ImgRaw&r=0"
                             alt="">
+                        </a>
                     </div>
 
 

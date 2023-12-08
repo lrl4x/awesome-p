@@ -23,4 +23,6 @@ Route::get('/cars/{carType}', function ($carType) {
        'text'=>'back-end',
        'carType'=>$carType
    ]);
+   
  });
+ 

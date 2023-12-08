@@ -30,6 +30,8 @@ Route::group(['middleware'=>['AuthCheck']],function(){
    Route::get('/login',[AuthController::class,'login'])->name('login');
    //custom Register Routes
    Route::get('/register',[AuthController::class,'register'])->name('register');
+   //logout Route
+   Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 });
 
 
@@ -41,15 +43,20 @@ Route::post('/login',[AuthController::class,'loginPost'])->name('login-Post');
 
 Route::post('/register',[AuthController::class,'registerPost'])->name('register-Post');
 
-//logout Route
-Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
-//cars views 
-Route::get('/mercedes',[CarsController::class,'index'])->name('mercedes');
 
-Route::get('/cars/{carType}',[CarsController::class,'dan']);
-//rousourse route for cars...
-Route::resource('/cars',CarsController::class);
+// cars views 
+Route::get('cars/index/{carType}',[CarsController::class,'index'])->name('cars.index');
+Route::get('cars/create',[CarsController::class,'create'])->name('cars.create');
+Route::post('cars/store',[CarsController::class,'store'])->name('cars.store');
+Route::get('cars/index/cars/show/{id}',[CarsController::class,'show'])->name('cars.show');
+Route::get('cars/index/cars/show/cars/index/cars/show/{id}/edit',[CarsController::class,'edit'])->name('cars.edit');
+Route::post('cars/update/{id}',[CarsController::class,'update'])->name('cars.update');
+Route::delete('cars/destroy/{id}',[CarsController::class,'destroy'])->name('cars.destroy');
+Route::get('cars/search',[CarsController::class,'search'])->name('cars.search');
+
+// //rousourse route for cars...
+// Route::resource('cars',CarsController::class);
 
 
 
