@@ -49,9 +49,9 @@ Route::post('/register',[AuthController::class,'registerPost'])->name('register-
 Route::get('cars/index/{carType}',[CarsController::class,'index'])->name('cars.index');
 Route::get('cars/create',[CarsController::class,'create'])->name('cars.create');
 Route::post('cars/store',[CarsController::class,'store'])->name('cars.store');
-Route::get('cars/index/cars/show/{id}',[CarsController::class,'show'])->name('cars.show');
+Route::get('cars/index/cars/show/{id}', [CarsController::class, 'show'])->name('cars.show');
 Route::get('cars/index/cars/show/cars/index/cars/show/{id}/edit',[CarsController::class,'edit'])->name('cars.edit');
-Route::post('cars/update/{id}',[CarsController::class,'update'])->name('cars.update');
+Route::put('cars/update/{id}',[CarsController::class,'update'])->name('cars.update');
 Route::delete('cars/destroy/{id}',[CarsController::class,'destroy'])->name('cars.destroy');
 Route::get('cars/search',[CarsController::class,'search'])->name('cars.search');
 

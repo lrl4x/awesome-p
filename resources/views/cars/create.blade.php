@@ -5,13 +5,14 @@
         <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             ADD NEW CAR
         </h1>
-        <form action="{{route('cars.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('cars.store') }}" method="POST" enctype="multipart/form-data">
+
             @csrf
-            @method('POST')
+            {{-- @method('POST') --}}
             {{-- name --}}
             <div>
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CAR NAME</label>
-                <input type="text" id="name" name="name"
+                <input type="text" id="name" name="name" placeholder="Bmw or Audi ...etc"
                     class="block w-full p-2 text-gray-00 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
             {{-- description --}}

@@ -92,18 +92,23 @@ class CarsController extends Controller
             'price' => 'required|string|max:10',
             'image' => 'required|mimes:jpg,png,jped|max:5048',
         ]);
+        $newImageName = uniqid() . '_' . $request->title . '.' . $request->image->extension();
 
-
+        $request->image->move(public_path('images'), $newImageName);
+    
         Car::where('id', $id)->update([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
             'phone' => $request->input('phone'),
             'region' => $request->input('region'),
             'price' => $request->input('price'),
+            'image_path' => $newImageName,
             'user_id' => auth()->user()->id
         ]);
-        return redirect(route('cars.show'));
+    
+        return redirect(route('cars.show', ['id' => $id]));
     }
+    
 
 
     public function destroy($id)
@@ -115,18 +120,18 @@ class CarsController extends Controller
          
     public function search(Request $request)
     {
-        $car =new Car();
-        if (isset($_GET['query'])) {
-            $search = $_GET['query'];
-   
-            $query = DB::table('car')->where('description', 'LIKE', '%' . $search . '%')->get();                 
-          
+        $search = $request->query('query');
+        if ($search) {
+            $query = Car::where('description', 'LIKE', '%' . $search . '%')->get();
+            
             return view('cars.search', [
                 'cars' => $query
             ]);
-
         } else {
             return view('cars.index');
         }
-    }         
+    }
+    
+
+           
 }
